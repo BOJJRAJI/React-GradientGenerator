@@ -9,6 +9,7 @@ export const BgContainer = styled.div`
   min-height: 100vh;
   background-color: #014f7b;
   background-image: linear-gradient(${props => props.gradientValue});
+  padding: 20px;
 `
 
 export const Heading = styled.h1`
@@ -16,6 +17,9 @@ export const Heading = styled.h1`
   color: white;
   font-weight: bold;
   font-family: 'Roboto';
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+  }
 `
 
 export const Text = styled.p`
@@ -28,12 +32,17 @@ export const Text = styled.p`
 export const ButtonsContainer = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 30%;
+  padding-left: 0px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
 `
 
 export const List = styled.li`
   list-style-type: none;
+  margin-right: 10px;
 `
 
 export const Button = styled.button`
@@ -55,7 +64,11 @@ export const InputColorsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  width: 20%;
+  width: 30%;
+
+  @media screen and (max-width: 576px) {
+    width: 80%;
+  }
 `
 
 export const Input = styled.input`
